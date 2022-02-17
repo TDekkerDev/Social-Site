@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" href="/hellowordsource/Social-Site/user/user_Bericht_form.php">link</a>
+          <a class="nav-link active" href="/hellowordsource/Social-Site/create-bericht/user_Bericht_form.php">link</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">link</a>
