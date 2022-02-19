@@ -64,3 +64,18 @@
         box-shadow: inset 0px 0px 0px 30px #7ac142
     }
 }
+.login{
+    width: 600px;
+    margin-top: 400px;
+}
+
+.jumbotron{
+background-color: #979796;
+padding: 20px;
+margin-top: 20px;
+border-radius: 10px;
+}
+
+.top{
+    margin-top: 400px;
+}

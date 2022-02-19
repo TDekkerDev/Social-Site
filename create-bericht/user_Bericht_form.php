@@ -7,6 +7,7 @@
             <br>
             <br>
             <br>
+            <br>
            <h2>wat is de auteur</h2>
            <input class="form-control" type="text" name="auteur" required>
            <br>

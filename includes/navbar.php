@@ -7,13 +7,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" href="/hellowordsource/Social-Site/create-bericht/user_Bericht_form.php">link</a>
+          <a class="nav-link active" href="/hellowordsource/Social-Site/create-bericht/user_Bericht_form.php">bericht</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">link</a>
+          <a class="nav-link" href="/hellowordsource/Social-Site/user/log_in_user.php">user login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">link</a>
+          <a class="nav-link" href="/hellowordsource/Social-Site/admin/log_in_admin.php">admin login</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">lnik</a>
