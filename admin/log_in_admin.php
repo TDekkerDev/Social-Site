@@ -7,18 +7,18 @@
 <br>
 <br>
 <br>
-<form action="login_user.php" method="post">
-<div class="top row justify-content-center">
-<form action="login.php" method="post">
+<form action="login_admin.php" method="post">
+<div class="row justify-content-center">
+<div class="jumbotron login col-md-3">
      	<h2>LOGIN</h2>
      	<?php if (isset($_GET['error'])) { ?>
      		<p class="error"><?php echo $_GET['error']; ?></p>
      	<?php } ?>
-     	<label>User Name</label>
-     	<input type="text" name="uname" placeholder="User Name"><br>
+		 <label>admin username</label>
+     	<input class="form-control" id="exampleInputPassword1" type="text" name="uname" placeholder="User Name"><br>
 
-     	<label>User Name</label>
-     	<input type="password" name="password" placeholder="Password"><br>
+		 <label>admin password</label>
+     	<input class="form-control" id="exampleInputPassword1" type="password" name="password" placeholder="Password"><br>
 
      	<button class="btn btn-primary" type="submit">Login</button>
 		 </div>

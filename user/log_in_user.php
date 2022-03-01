@@ -8,17 +8,16 @@
 <br>
 <br>
 <form action="login_user.php" method="post">
-<div class="top row justify-content-center">
-<div class="top jumbotron login col-md-3">
+<div class="row justify-content-center">
+<div class="jumbotron login col-md-3">
      	<h2>LOGIN</h2>
      	<?php if (isset($_GET['error'])) { ?>
      		<p class="error"><?php echo $_GET['error']; ?></p>
      	<?php } ?>
-     	<label>User Name</label>
+     	<label>user username</label>
      	<input class="form-control" id="exampleInputPassword1" type="text" name="uname" placeholder="User Name"><br>
 
-     	<label>User pass
-		 </label>
+     	<label>User password</label>
      	<input class="form-control" id="exampleInputPassword1" type="password" name="password" placeholder="Password"><br>
 
      	<button class="btn btn-primary" type="submit">Login</button>
