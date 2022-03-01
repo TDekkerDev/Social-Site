@@ -5,7 +5,7 @@
 session_start();
 
 if ($_SESSION["login_user"] == true){
-    $sql = "SELECT * FROM bericht"; 
+    $sql = "SELECT * FROM `bericht` ORDER BY `bericht`.`date/time` DESC"; 
     $sth = $db->prepare($sql); 
     $sth->execute(); 
   
@@ -15,14 +15,14 @@ if ($_SESSION["login_user"] == true){
     <br>
     <td><?php echo $row["Titel"]; ?></td>
     <br>
-    <img src="../uplode_media/<?php echo $row["imglocation"]?>" alt="<?php $row["nameimg"]?>">
+    <img src="../uplode_media/<?php echo $row["imglocation"]?>" alt="<?php echo $row["nameimg"]?>">
     <br>
     <td><?php echo $row["Bericht"]; ?></td>
     <br>
     <td><?php echo $row["Auteur"]; ?></td>
     </tr>
     <?php } ?> 
-<?php } ?>
+<?php }else echo "pleas login" ?>
 
 
 
