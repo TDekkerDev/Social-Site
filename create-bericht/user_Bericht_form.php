@@ -15,7 +15,7 @@
            <input class="form-control" type="text" name="titel" required>
            <br>
            <h2>wat is het bericht</h2>
-           <input class="form-control" type="text" name="bericht" required>
+           <textarea class="form-control" type="text" name="bericht" rows="8" required></textarea>
            <h2>upload een foto</h2> 
            <div class="input-group mb-3">
            <input type="file"class="form-control" id="inputGroupFile02"  name="fileToUpload">
