@@ -4,6 +4,17 @@ $auteur = $_POST['auteur'];
 $titel = $_POST['titel'];
 $bericht = $_POST['bericht'];
 
+function generateRandomString($length = 25) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
+$randomname = generateRandomString();
+
 $target_dir = "C:/xampp/htdocs/hellowordsource/Social-Site/uplode_media/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
@@ -43,7 +54,7 @@ if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg
   $uploadOk = 0;
     die("not a image");
 }
-
+$target_file = $target_dir . $randomname;
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
   echo "Sorry, your file was not uploaded.";
@@ -58,9 +69,10 @@ if ($uploadOk == 0) {
 
 $name_img = ($_FILES["fileToUpload"]["name"]);
 
+
  $sql = "INSERT INTO bericht(auteur, titel, bericht, imglocation )VALUES (:auteur, :titel, :bericht, :imglocation)";
  $stmt = $db->prepare($sql);
  $stmt->execute([':auteur' => $auteur, ':titel' => $titel , ':bericht' => $bericht, ':imglocation' => $name_img]);
  echo "Data is toegevoegd";
 header("Location:upload_done.php");S
-// ?>
+?>
