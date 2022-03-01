@@ -1,5 +1,12 @@
 <?php include "../includes/header.php"; ?>
 <?php include "../includes/navbar.php"; ?> 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <form action="login_user.php" method="post">
 <div class="top row justify-content-center">
 <div class="top jumbotron login col-md-3">
