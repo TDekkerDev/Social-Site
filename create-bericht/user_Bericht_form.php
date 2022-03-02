@@ -1,5 +1,7 @@
 <?php include "../includes/header.php"; ?>
 <?php include "../includes/navbar.php"; ?>
+<?php session_start(); ?>
+<?php if ($_SESSION['login_user'] == true){ ?>
 <div class="container">
 <form class="col-6" action="create-bericht.php" method="post" enctype="multipart/form-data">
             <br>
@@ -25,4 +27,5 @@
          
 </form>
 </div>
+<?php } else { echo"pleas login";} ?>
 <?php include "../includes/footer.php"; ?>
