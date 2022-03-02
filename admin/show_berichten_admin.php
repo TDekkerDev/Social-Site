@@ -1,10 +1,11 @@
 <?php include "../includes/header.php"; ?>
 <?php include "../includes/navbar.php"; ?> 
 <?php include "../includes/connectdb.php"; ?>
+<?php include "../exstra/fuction.php"; ?>
 <?php
 session_start();
 
-if ($_SESSION["login_user"] == true){
+if ($_SESSION["login_admin"] == true){
     $sql = "SELECT * FROM `bericht` ORDER BY `bericht`.`date/time` DESC"; 
     $sth = $db->prepare($sql); 
     $sth->execute(); 
@@ -30,13 +31,14 @@ if ($_SESSION["login_user"] == true){
     <td><?php echo $row["Auteur"]; ?></td>
     </div>
     </tr>
+    <button onclick="deleteBericht()" type="button" class="btn btn-danger">delete</button>
     </div>
     </div>
     </div>
     <br>
     <br>
     <?php } ?> 
-<?php }else echo "pleas login" ?>
+<?php }else echo "you are not allowed to access" ?>
 
 
 

@@ -16,10 +16,13 @@
           <a class="nav-link active" href="/hellowordsource/Social-Site/admin/log_in_admin.php">admin login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="/hellowordsource/Social-Site/user/logout_user.php">logout</a>
+          <a class="nav-link active" href="/hellowordsource/Social-Site/exstra/logout_user.php">logout</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="/hellowordsource/Social-Site/user/show_berichten_user.php">berichten</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/hellowordsource/Social-Site/admin/show_berichten_admin.php">admin</a>
         </li>
       </ul>
     </div>
