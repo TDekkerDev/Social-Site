@@ -1,7 +1,6 @@
 <?php include "../includes/header.php"; ?>
 <?php include "../includes/navbar.php"; ?> 
 <?php include "../includes/connectdb.php"; ?>
-<?php include "../exstra/fuction.php"; ?>
 <?php
 session_start();
 
@@ -31,7 +30,11 @@ if ($_SESSION["login_admin"] == true){
     <td><?php echo $row["Auteur"]; ?></td>
     </div>
     </tr>
-    <button onclick="deleteBericht()" type="button" class="btn btn-danger">delete</button>
+    <form method="post" action="../exstra/dell.php">
+    <input type="hidden" name="imglocation" value="<?php echo $row["imglocation"]; ?>">
+    <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
+    <input type="submit" name="delete" value="delete" class="btn btn-danger">
+    </form>
     </div>
     </div>
     </div>
