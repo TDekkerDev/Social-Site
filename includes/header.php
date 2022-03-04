@@ -8,9 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/hellowordsource/Social-Site/css/style.css">
     <link rel="stylesheet" href="/hellowordsource/Social-Site/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/hellowordsource/Social-Site/css/like.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Heebo:800'><link rel="stylesheet" href="./style.css">
     <title>solial-site</title>
 </head>
 <body>
