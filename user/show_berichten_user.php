@@ -28,13 +28,18 @@ if ($_SESSION["login_user"] == true){
     <td><?php echo $row["Bericht"]; ?></td>
     <br>
     <td><?php echo $row["Auteur"]; ?></td>
-    <br>
-    <td> likes: <?php echo $row["likes"]; ?></td>
     </div>
-    </tr>
     <form method="post" action="../exstra/like.php">
     <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
     <input type="submit" name="like" value="like" class="btn btn-danger">
+    </form>
+    <td> likes: <?php echo $row["likes"]; ?></td>
+    <form method="post" action="../exstra/unlike.php">
+    <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
+    <input type="submit" name="like" value="unlike" class="btn btn-danger">
+    </form>
+    </tr>
+    </form>
     </div>
     </div>
     </div>

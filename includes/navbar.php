@@ -24,6 +24,9 @@
         <li class="nav-item">
           <a class="nav-link active" href="/hellowordsource/Social-Site/admin/show_berichten_admin.php">admin</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/hellowordsource/Social-Site/user/create_user_form.php">create user</a>
+        </li>
       </ul>
     </div>
   </div>
