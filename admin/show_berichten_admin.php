@@ -35,6 +35,10 @@ if ($_SESSION["login_admin"] == true){
     <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
     <input type="submit" name="delete" value="delete" class="btn btn-danger">
     </form>
+    <form method="post" action="../create-bericht/change-bericht.php">
+    <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
+    <input type="submit" class="btn btn-info" name="delete" value="delete" class="btn btn-danger">
+    </form>
     </div>
     </div>
     </div>
