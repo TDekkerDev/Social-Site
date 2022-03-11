@@ -81,9 +81,9 @@ $likes = 0;
 $name_img = ($_FILES["fileToUpload"]["name"]);
 
 
- $sql = "INSERT INTO bericht(auteur, titel, bericht, nameimg, imglocation, likes)VALUES (:auteur, :titel, :bericht, :nameimg, :imglocation, :likes)";
- $stmt = $db->prepare($sql);
- $stmt->execute([':auteur' => $auteur, ':titel' => $titel , ':bericht' => $bericht, ':nameimg' => $name_img, ':imglocation' => $randomnameext, ':likes' => $likes]);
- echo "Data is toegevoegd";
+$sql = "INSERT INTO bericht(auteur, titel, bericht, nameimg, imglocation, likes)VALUES (:auteur, :titel, :bericht, :nameimg, :imglocation, :likes)";
+$stmt = $db->prepare($sql);
+$stmt->execute([':auteur' => $auteur, ':titel' => $titel , ':bericht' => $bericht, ':nameimg' => $name_img, ':imglocation' => $randomnameext, ':likes' => $likes]);
+echo "Data is toegevoegd";
 header("Location:upload_done.php");S
 ?>
