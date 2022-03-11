@@ -35,33 +35,24 @@ if ($_SESSION["login_user"] == true){
             <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
             <input type="submit" name="like" value="like" class="btn btn-danger">
             </form>
-
-
             <td> likes: <?php echo $row["likes"]; ?></td>
-
-
             <form method="post" action="../exstra/unlike.php">
             <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
             <input type="submit" name="like" value="unlike" class="btn btn-danger">
             </form>
             <h1>Comments:</h1>
-
-
                             <div>
                                 <?php
-                                $sql2 = "SELECT * FROM bericht b JOIN comment c ON (c.post_id = b.id)"; 
+                                $sql2 = "SELECT * FROM bericht b JOIN comment c ON (c.post_id = b.id) WHERE c.post_id = b.id AND b.id = :id";
                                 $sth2 = $db->prepare($sql2); 
-                                $sth2->execute();
+                                $sth2->execute(['id' => $row["id"]]);
                                 while($com = $sth2->fetch()){ ?>
-                                <td><?php echo $com["comment"]; echo "<br>"?> </td>
+                                    <div class="comment">
+                                        <td><?php echo $com["comment"]; echo "<br>"?> </td>
+                                    </div>
                                 <?php } ?>
                             
                             </div>
-
-
-
-
-
             </div>
             <br>
             <br>

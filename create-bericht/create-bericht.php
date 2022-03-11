@@ -16,7 +16,7 @@ if(isset($_POST["submit"])) {
     echo "File is an image - " . $check["mime"] . ".";
     $uploadOk = 1;
   } else {
-    header("Location: /hellowordsource/Social-Site/create-bericht/upload_failde.php");
+    header("Location: /hellowordsource/Social-Site/create-bericht/upload_failde_create.php");
     echo "File is not an image.";
     $uploadOk = 0;
     die("not a image");
@@ -32,7 +32,7 @@ if (file_exists($target_file)) {
 
 // Check file size
 if ($_FILES["fileToUpload"]["size"] > 500000) {
-  header("Location: /hellowordsource/Social-Site/create-bericht/upload_failde.php");
+  header("Location: /hellowordsource/Social-Site/create-bericht/upload_failde_create.php");
   echo "Sorry, your file is too large.";
   $uploadOk = 0;
   die("file too large");
@@ -41,7 +41,7 @@ if ($_FILES["fileToUpload"]["size"] > 500000) {
 // Allow certain file formats
 if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
 && $imageFileType != "gif" ) {
-  header("Location: /hellowordsource/Social-Site/create-bericht/upload_failde.php");
+  header("Location: /hellowordsource/Social-Site/create-bericht/upload_failde_create.php");
   echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
   $uploadOk = 0;
     die("not a image");
@@ -65,7 +65,7 @@ echo $randomnameext;
 $target_file = $target_dir . $randomnameext;
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
-  header("Location: /hellowordsource/Social-Site/create-bericht/upload_failde.php");
+  header("Location: /hellowordsource/Social-Site/create-bericht/upload_failde_create.php");
   echo "Sorry, your file was not uploaded.";
 // if everything is ok, try to upload file
 } else {
@@ -85,5 +85,5 @@ $sql = "INSERT INTO bericht(auteur, titel, bericht, nameimg, imglocation, likes)
 $stmt = $db->prepare($sql);
 $stmt->execute([':auteur' => $auteur, ':titel' => $titel , ':bericht' => $bericht, ':nameimg' => $name_img, ':imglocation' => $randomnameext, ':likes' => $likes]);
 echo "Data is toegevoegd";
-header("Location:upload_done.php");S
+header("Location:upload_done_create.php");
 ?>

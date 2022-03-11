@@ -25,7 +25,9 @@ if ($_SESSION["login_admin"] == true){
     <br>
     <br>
     <div id="textbericht">
-    <td><?php echo $row["Bericht"]; ?></td>
+        <div class="textbox">
+            <td><?php echo $row["Bericht"]; ?></td>
+        </div>
     <br>
     <td><?php echo $row["Auteur"]; ?></td>
     </div>
@@ -35,15 +37,35 @@ if ($_SESSION["login_admin"] == true){
     <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
     <input type="submit" name="delete" value="delete" class="btn btn-danger">
     </form>
-    <form method="post" action="../create-bericht/change-bericht.php">
+    <form method="post" action="../create-bericht/change-bericht-form.php">
     <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
-    <input type="submit" class="btn btn-info" name="delete" value="delete" class="btn btn-danger">
+    <input type="submit" class="btn btn-info" name="change" value="change" class="btn btn-danger">
     </form>
-    </div>
-    </div>
+    <h1>Comments:</h1>
+                            <div>
+                                <?php
+                                $sql2 = "SELECT * FROM bericht b JOIN comment c ON (c.post_id = b.id) WHERE c.post_id = b.id AND b.id = :id";
+                                $sth2 = $db->prepare($sql2); 
+                                $sth2->execute(['id' => $row["id"]]);
+                                while($com = $sth2->fetch()){ ?>
+                                    <div class="comment">
+                                        <td><?php echo $com["comment"]; echo "<br>"?> </td>
+                                    </div>
+                                <?php } ?>
+                            
+                            </div>
     </div>
     <br>
-    <br>
+            <form method="post" action="../create-bericht/makecomment.php">
+            <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
+            <textarea class="form-control" type="text" name="comment" rows="3" required></textarea>
+            <br>
+            <input type="submit" name="coment" value="coment" class="btn btn-primary">
+            </form>
+            <br>
+            <br>
+    </div>
+    </div>
     <?php } ?> 
 <?php }else echo "you are not allowed to access" ?>
 

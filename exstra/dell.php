@@ -7,7 +7,7 @@
     $stmt = $db->prepare($sql);
     $stmt->execute(['id' => $id]);
     unlink("C:/xampp/htdocs/hellowordsource/Social-Site/uplode_media/".$filename);
-    header("Location: ../admin/show_berichten_admin.php");
+    header("Location: ../create-bericht/upload_done_change.php");
     exit();
 
 
