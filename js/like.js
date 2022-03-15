@@ -1,3 +1,4 @@
 function like( id){
-$.get("like.php",{id:id});
+    alert(id);
+$.get("/hellowordsource/Social-Site/exstra/like.php",{id:id});
 }
