@@ -1,6 +1,6 @@
 <?php include "../includes/connectdb.php"; ?>
 <?php
-    $id = $_POST['id'];
+    $id = $_GET['id'];
     $sql = "SELECT * FROM bericht WHERE id = :id"; 
     $sth = $db->prepare($sql); 
     $sth->execute(['id' => $id]); 
@@ -15,8 +15,8 @@
         $sth2 = $db->prepare($sql2); 
         $sth2->execute([':likes' => $likes,':id' => $id]);
 
-    header("Location: ../user/show_berichten_user.php");
-    exit();
+    // header("Location: ../user/show_berichten_user.php");
+    // exit();
 
 
 ?>

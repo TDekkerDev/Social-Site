@@ -31,18 +31,9 @@ if ($_SESSION["login_user"] == true){
         <br>
         <td><?php echo $row["Auteur"]; ?></td>
         </div>
-            <!-- <form method="post" action="../exstra/like.php">
-            <input type="hidden" name="id" value="<?php //echo $row["id"]; ?>">
-            <input type="submit" name="like" value="like" class="btn btn-danger">
-            </form> -->
             <a href="#" onclick="like(<?php echo $row["id"] ?>)"  class="btn btn-danger">Like</a>
-
-
             <td> likes: <?php echo $row["likes"]; ?></td>
-            <form method="post" action="../exstra/unlike.php">
-            <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
-            <input type="submit" name="like" value="unlike" class="btn btn-danger">
-            </form>
+            <a href="#" onclick="unlike(<?php echo $row["id"] ?>)"  class="btn btn-danger">Unlike</a>
             <h1>Comments:</h1>
                             <div>
                                 <?php

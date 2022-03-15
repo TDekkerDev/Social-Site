@@ -7,7 +7,6 @@
 
     while($row = $sth->fetch()) { 
         $row["likes"] = $row["likes"] + 1;
-        echo $row["likes"];
         $likes = $row["likes"];
 }
 

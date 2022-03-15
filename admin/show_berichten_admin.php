@@ -31,6 +31,9 @@ if ($_SESSION["login_admin"] == true){
     <br>
     <td><?php echo $row["Auteur"]; ?></td>
     </div>
+    <a href="#" onclick="like(<?php echo $row["id"] ?>)"  class="btn btn-danger">Like</a>
+            <td> likes: <?php echo $row["likes"]; ?></td>
+            <a href="#" onclick="unlike(<?php echo $row["id"] ?>)"  class="btn btn-danger">Unlike</a>
     </tr>
     <form method="post" action="../exstra/dell.php">
     <input type="hidden" name="imglocation" value="<?php echo $row["imglocation"]; ?>">
