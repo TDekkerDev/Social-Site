@@ -31,9 +31,19 @@ if ($_SESSION["login_user"] == true){
         <br>
         <td><?php echo $row["Auteur"]; ?></td>
         </div>
-            <a href="#" onclick="like(<?php echo $row["id"] ?>)"  class="btn btn-danger">Like</a>
-            <td> likes: <?php echo $row["likes"]; ?></td>
-            <a href="#" onclick="unlike(<?php echo $row["id"] ?>)"  class="btn btn-danger">Unlike</a>
+
+
+
+
+            <button style="display: inline-block;" id = 'likebutton<?php echo $row["id"] ?>' type="button" onclick="like(<?php echo $row["id"] ?>)"  class="btn btn-danger">Like</button>
+            <button style="display: none;" id = 'unlikebutton<?php echo $row["id"] ?>' type="button" onclick="unlike(<?php echo $row["id"] ?>)"  class="btn btn-danger">Unlike</button>
+            <br>
+            <td> likes: <div id = 'likes<?php echo $row["id"] ?>'> <?php echo $row["likes"]; ?> </div> </td>
+
+
+
+
+
             <h1>Comments:</h1>
                             <div>
                                 <?php
@@ -51,7 +61,7 @@ if ($_SESSION["login_user"] == true){
             <br>
             <br>
             <form method="post" action="../create-bericht/makecomment.php">
-            <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
+            <input id="like" type="hidden" name="id" value="<?php echo $row["id"]; ?>">
             <textarea class="form-control" type="text" name="comment" rows="3" required></textarea>
             <br>
             <input type="submit" name="coment" value="coment" class="btn btn-primary">

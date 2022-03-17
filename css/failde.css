@@ -5,6 +5,7 @@ script:nth-of-type(1), style:nth-of-type(1), meta:nth-of-type(1) {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+
   }
   
   script:nth-of-type(1):before, script:nth-of-type(1):after, style:nth-of-type(1):before {
