@@ -31,10 +31,16 @@ if ($_SESSION["login_admin"] == true){
     <br>
     <td><?php echo $row["Auteur"]; ?></td>
     </div>
-    <a href="#" onclick="like(<?php echo $row["id"] ?>)"  class="btn btn-danger">Like</a>
-            <td> likes: <?php echo $row["likes"]; ?></td>
-            <a href="#" onclick="unlike(<?php echo $row["id"] ?>)"  class="btn btn-danger">Unlike</a>
-    </tr>
+
+    <audio id = 'myAudio<?php echo $row["id"] ?>' >
+                <source src="/hellowordsource/Social-Site/media/audio/button.mp3" type="audio/mpeg">
+            </audio>
+            <button style="display: inline-block;" id = 'likebutton<?php echo $row["id"] ?>' type="button" onclick="like(<?php echo $row["id"] ?>)"  class="btn btn-danger">Like</button>
+            <button style="display: none;" id = 'unlikebutton<?php echo $row["id"] ?>' type="button" onclick="unlike(<?php echo $row["id"] ?>)"  class="btn btn-danger">Unlike</button>
+            <br>
+            <td> likes: <div id = 'likes<?php echo $row["id"] ?>'> <?php echo $row["likes"]; ?> </div> </td>
+
+
     <form method="post" action="../exstra/dell.php">
     <input type="hidden" name="imglocation" value="<?php echo $row["imglocation"]; ?>">
     <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">

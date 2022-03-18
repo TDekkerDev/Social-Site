@@ -34,7 +34,9 @@ if ($_SESSION["login_user"] == true){
 
 
 
-
+            <audio id = 'myAudio<?php echo $row["id"] ?>' >
+                <source src="/hellowordsource/Social-Site/media/audio/button.mp3" type="audio/mpeg">
+            </audio>
             <button style="display: inline-block;" id = 'likebutton<?php echo $row["id"] ?>' type="button" onclick="like(<?php echo $row["id"] ?>)"  class="btn btn-danger">Like</button>
             <button style="display: none;" id = 'unlikebutton<?php echo $row["id"] ?>' type="button" onclick="unlike(<?php echo $row["id"] ?>)"  class="btn btn-danger">Unlike</button>
             <br>
