@@ -47,13 +47,13 @@ if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg
     die("not a image");
 }
 function generateRandomString($length = 25) {
-  $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  $charactersLength = strlen($characters);
-  $randomString = '';
-  for ($i = 0; $i < $length; $i++) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
       $randomString .= $characters[rand(0, $charactersLength - 1)];
-  }
-  return $randomString;
+    }
+    return $randomString;
 }
 $randomname = generateRandomString();
 $parts = explode(".", $_FILES["fileToUpload"]["name"]);
