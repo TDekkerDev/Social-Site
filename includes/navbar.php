@@ -7,13 +7,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" href="/hellowordsource/Social-Site/create-bericht/user_Bericht_form.php">bericht</a>
+          <a class="nav-link active" href="/hellowordsource/Social-Site/create-bericht/user_Bericht_form.php">create-bericht</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="/hellowordsource/Social-Site/user/log_in_user.php">user login</a>
+          <a class="nav-link active" href="/hellowordsource/Social-Site/user/log_in_user.php">user-login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="/hellowordsource/Social-Site/admin/log_in_admin.php">admin login</a>
+          <a class="nav-link active" href="/hellowordsource/Social-Site/admin/log_in_admin.php">admin-login</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="/hellowordsource/Social-Site/exstra/logout_user.php">logout</a>
@@ -25,7 +25,7 @@
           <a class="nav-link active" href="/hellowordsource/Social-Site/admin/show_berichten_admin.php">admin</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="/hellowordsource/Social-Site/user/create_user_form.php">create user</a>
+          <a class="nav-link active" href="/hellowordsource/Social-Site/user/create_user_form.php">create-user</a>
         </li>
       </ul>
     </div>
